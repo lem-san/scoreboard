@@ -46,12 +46,14 @@ function startTimer() {
 }
 
 // prevent buttons (and score) to continue updating past countdown finish
+// DISABLED ON LANDING
 
 function disableButtons() {
     for (const button of buttons) {
         button.disabled = true;
     }
 }
+disableButtons()
 
 function resetButtons(){
     for (const button of buttons) {
