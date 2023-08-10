@@ -4,10 +4,11 @@ let scoreGuest = document.getElementById("score-guest")
 let home = 0
 let guest = 0
 
-// scoreboards 
+// scoreboard backgrounds 
 let bgHome = document.getElementById("bg-home")
 let bgGuest = document.getElementById("bg-guest")
 
+// countdown time, timer and buttons for enable/disable
 var time = 10
 var counter
 var cdTime = document.getElementById("cd-time")
@@ -123,3 +124,20 @@ function guestAdd3() {
     scoreGuest.textContent = guest
     checkScore()
 }
+
+// expose functions to the window object
+
+window.resetScores = resetScores
+window.resetTimer = resetTimer
+window.startTimer = startTimer
+
+window.disableButtons = disableButtons
+window.resetButtons = resetButtons
+window.checkScore = checkScore
+
+window.homeAdd1 = homeAdd1
+window.homeAdd2 = homeAdd2
+window.homeAdd3 = homeAdd3
+window.guestAdd1 = guestAdd1
+window.guestAdd2 = guestAdd2
+window.guestAdd3 = guestAdd3
